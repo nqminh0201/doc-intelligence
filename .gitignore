@@ -1,0 +1,45 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment variables (NEVER commit API keys!)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (too large for git)
+data/documents/*.pdf
+data/documents/*.txt
+!data/documents/.gitkeep
+
+# ChromaDB local storage
+chroma_db/
+
+# Model files (too large for git)
+models/
+*.bin
+*.safetensors
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
