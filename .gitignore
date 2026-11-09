@@ -38,6 +38,11 @@ models/
 *.bin
 *.safetensors
 
+# Personal study notes & journal (DO NOT PUSH)
+docs/
+*JOURNAL*
+*journal*
+
 # Jupyter
 .ipynb_checkpoints/
 
