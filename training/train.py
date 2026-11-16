@@ -47,15 +47,15 @@ TRAINING_DIR = Path(__file__).parent
 DATA_DIR = TRAINING_DIR / "data"
 ADAPTER_SAVE_DIR = TRAINING_DIR / "lora_adapter"
 
-# SmolLM2-135M-Instruct uses the Llama Transformer architecture (q_proj, v_proj)
-# and runs comfortably on CPU while demonstrating real production LoRA.
-BASE_MODEL_NAME = "HuggingFaceTB/SmolLM2-135M-Instruct"
+# tinyllama-15M uses the exact Llama Transformer architecture (q_proj, v_proj)
+# and runs in seconds on CPU while demonstrating real production LoRA.
+BASE_MODEL_NAME = "nickypro/tinyllama-15M"
 
 LORA_RANK = 8            # Rank (r) of the low-rank decomposition matrices A and B
 LORA_ALPHA = 16          # Scaling factor (alpha / r scales the adapter output)
 LORA_DROPOUT = 0.05      # Dropout probability for regularization
-LEARNING_RATE = 3e-4     # Standard LoRA learning rate (higher than full fine-tuning)
-EPOCHS = 5               # Number of complete passes over the training dataset
+LEARNING_RATE = 1e-3     # LoRA learning rate for small adapter convergence
+EPOCHS = 15              # Number of complete passes over the training dataset
 MAX_SEQ_LENGTH = 256     # Maximum token length per training example
 BATCH_SIZE = 2           # Examples processed per forward pass
 

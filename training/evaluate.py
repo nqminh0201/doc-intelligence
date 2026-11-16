@@ -71,9 +71,10 @@ def generate_answer(model: torch.nn.Module, tokenizer: AutoTokenizer, record: Di
     with torch.no_grad():
         output_ids = model.generate(
             **inputs,
-            max_new_tokens=70,
-            temperature=0.1,
+            min_new_tokens=20,
+            max_new_tokens=60,
             do_sample=False,
+            repetition_penalty=1.2,
             pad_token_id=tokenizer.eos_token_id,
         )
     # Decode only the newly generated tokens after the prompt
