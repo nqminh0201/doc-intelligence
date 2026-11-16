@@ -27,7 +27,7 @@ CHUNK_SIZE = 500        # Characters per chunk
 CHUNK_OVERLAP = 50      # Overlap between chunks (for context continuity)
 
 # ── LLM (Ollama) ─────────────────────────────────────────────────
-OLLAMA_MODEL = "mistral"    # Change to "llama3.2" if you prefer
+OLLAMA_MODEL = "llama3.2"   # 3B params — fast on CPU, ideal for local RAG
 OLLAMA_BASE_URL = "http://localhost:11434"
 
 # ── RAG Settings ──────────────────────────────────────────────────
