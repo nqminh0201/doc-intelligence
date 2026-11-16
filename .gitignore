@@ -35,6 +35,8 @@ chroma_db/
 
 # Model files (too large for git)
 models/
+training/checkpoints/
+training/lora_adapter/
 *.bin
 *.safetensors
 
